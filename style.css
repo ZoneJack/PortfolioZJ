@@ -1,0 +1,528 @@
+/*Base Start*/
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+:root {
+  --main-font-family: "Oxygen", sans-serif;
+  --main-text-color: #f8f6f0;
+  --main-border-color: #e3e0d5;
+  --black-color: #151922;
+  --black-shadow-color: #151922;
+  --blue-text-color: #123e82;
+  --blue-border-color: #131047;
+  --blue-shadow-color: #032760;
+  --lightblue-shadow-color: #0066b2;
+  --softblue-shadow-color: #1877f2;
+  --aquamarina-link-color: #15f4ee;
+  --aquamarina-soft-shadow-color: #bad2f7;
+  --url-background-regular: url(https://i.ibb.co/wR1gp1X/IMG-20221105-225056-374.jpg) no-repeat center;
+  --url-background-small: url(https://i.ibb.co/rbQVFTS/Regular-Mode-Small.jpg) no-repeat center;
+  --sun-button: #f1d778;
+  --moon-button: #2c3968;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  color: var(--main-text-color);
+
+}
+body {
+  font-family: var(--main-font-family); 
+  font-size: 100%;
+  min-height: 100vh;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+.close {
+  color: var(--black-color);
+  font-size: 2em;
+  position: absolute;
+  right: 5%;
+  top: 4%;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.close:hover {
+  color: var(--main-text-color);
+  font-size: 240%;
+  text-shadow: 0.1em 0.1em 0.1em var(--blue-text-color);
+} 
+.title {
+  border-bottom: 3px solid var(--blue-text-color);
+  width: 4.8em;
+  height: 2em;
+} 
+.sectionHold {
+  overflow: hidden;
+  position: absolute;
+  backdrop-filter: blur(10em);
+  border: 3px solid var(--blue-border-color);
+  border-radius: 10px;
+  text-shadow: 0.2em 0.2em 0.2em var(--blue-shadow-color);
+  z-index: 0;
+  transition: opacity .5s ease-in-out;
+  opacity: 0;
+}
+.smallDevice {
+   display: none; 
+}
+.show {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+}
+/*Base End*/
+/*homeBase Start*/
+.home {
+  background: var(--url-background-regular);
+  height: 70vw;
+  width: 100%;
+  overflow: hidden; 
+  background-size: cover;
+  z-index: 1;
+  position: absolute; 
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  text-shadow: 0.2em 0.2em 0.2em var(--black-text-color);
+  transition: all .3s ease-in-out;
+}
+.homeHolder {
+  margin: auto;
+  margin-top: 10%;
+}
+.presentation {
+  font-size: 450%;
+  border: 2px solid var(--main-border-color);
+  border-left: none;
+  border-right: none;
+  text-shadow: .05em .05em 0 var(--black-shadow-color);
+}
+.presentation p {
+  font-size: 0.35em;
+  position: relative;
+  bottom: -6em;
+  text-shadow: 0.1em 0.1em 0.1em var(--lightblue-shadow-color);
+}
+.logo {
+  font-size: 0.7em;
+  margin-top: -3%;
+}
+.buttons {
+  border: 2px solid var(--main-border-color);
+  border-radius: 10px;
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 200%;
+  color: var(--black-color);
+  text-shadow: 0.1em 0.1em 0.1em var(--lightblue-shadow-color);
+} 
+.buttons p {
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  border-right: 2px solid var(--main-border-color);
+  border-left: 2px solid var(--main-border-color);
+  width: 7em;
+}
+.buttons p:hover {
+  font-size: 115%;
+  color: var(--black-color);
+  text-shadow: 0.2em 0.2em 0.5em var(--softblue-shadow-color);
+  backdrop-filter: blur(30px);
+
+} 
+/*homeBase End*/
+/*aboutMe Start*/
+.aboutMe {
+  width: 60vw;
+  height: 55vw;
+  margin: 3% 20%;
+  padding: 2%;
+}
+.profilePhoto {
+  box-shadow: 0.1em 0.1em 1.3em var(--blue-text-color);
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover;
+  height: 32%;
+  width: 30%;
+  margin-top: 3%;
+}
+.aboutMe p {
+  font-size: 2.5em;
+  margin: 2% auto;
+  text-align: justify;
+
+}
+/*aboutMe End*/
+/*works start*/
+.works {
+  height: 60vw;
+  width: 80%;  
+  padding: 2%;
+  margin: 3% 10%;
+}
+.son {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1%;
+  height: 25vw;
+  width: 100%;
+  padding: 1%;
+}
+.accessLinks {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-shadow: 0.1em 0.1em 0.2em var(--black-shadow-color);
+} 
+.side-b {
+  text-align: right;
+}
+.previousWorks {
+  padding: 4.8% 0 0 0;
+}
+.works a {
+  height: 5em;
+  color: var(--aquamarina-link-color);
+  transition: all .3s ease-in-out;
+} 
+.works a:hover {
+  font-size: 110%;
+  color: var(--aquamarina-soft-shadow-color);
+}
+.aImage {
+  width: 20em;
+  height: 20em;
+}
+.workImage {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0.1em 0.1em 1.3em var(--blue-text-color);
+} 
+/*works End*/
+/*carrousel Start*/
+.carrousel {
+  margin: auto;
+  margin-top: 3%;
+  width: 80%;
+  height: 90%;
+  max-width: 120em;
+  border-radius: 1em;
+  box-shadow: 1em 1em 2em var(--black-shadow-color), -1em -1em 2em var(--aquamarina-soft-shadow-color), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  overflow: hidden;
+}
+.carrouselHolder {
+  width: 400%;
+  height: 80%; 
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  transition: all .5s ease;
+  transform: translateX(0%);
+}
+.imagen {
+  width: calc(100% / 4 - 2em);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carrousel a {
+  text-shadow: 0.1em 0.1em 0.1em var(--black-shadow-color);
+}
+.imageButtons {
+  width: 100%;
+  margin: 2em 0 0;
+  list-style: none;
+  padding: .4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.imgBttn {
+  width: 2em;
+  height: 2em;
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  margin: 1em 1em 0;
+  background-color: var(--lightblue-shadow-color);
+  box-shadow: 0.1em 0.1em 1.5em var(--main-border-color);
+} 
+.imgBttn.active {
+  background-color: var(--aquamarina-link-color);
+} 
+/*carrousel End*/
+/*coverLetter Start*/
+.coverLetter {
+  width: 60vw;
+  height: 55vw;
+  margin: 3% 20%;
+  padding: 2%;
+}
+.coverLetter h2 {
+  border-bottom: 3px solid var(--blue-text-color);
+  width: 6em;
+  height: 2em;
+} 
+.coverLetter  p {
+  font-size: 1.4em;
+  margin: 2% auto;
+  text-align: justify;
+}
+/*coverLetter End*/
+/*contactMe Start*/
+.contactMe {
+  width: 75vw;
+  height: 40vw;
+  margin: 8% 12%;
+  padding: 2%;
+}
+.contactHolder {
+  display: flex;
+  padding: 2%;
+}
+.linkedin {
+  height: 30vw;
+  width: 30vw;
+}
+.mobileData {
+  font-size: 1.5em;
+  margin-left: 1%;
+  padding-left: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-left: 3px solid var(--blue-shadow-color);
+  
+} 
+.mobileData h2 {
+  color: var(--aquamarina-link-color);
+  transition: all .3s ease-in-out;
+  text-shadow: 0.1em 0.1em 0.1em var(--black-shadow-color);
+} 
+.mobileData h2:hover {
+  font-size: 180%;
+  color: var(--aquamarina-soft-shadow-color);
+  text-shadow: 0.1em 0.1em 0.1em var(--lightblue-shadow-color);
+} 
+.mobileData h1 {
+  text-shadow: 0.1em 0.1em 0.1em var(--lightblue-shadow-color);
+  text-align: center;
+} 
+/*contactMe End*/
+/*@media start*/
+@media screen and (max-width: 1024px) {
+  .buttons p {
+    color: var(--main-text-color);
+  
+  }
+  .sectionHold {
+    margin-top: 8%;
+  }
+  .sectionHold p {
+    font-size: 2em;
+  }
+  .home {
+    height: 100%;
+    width: 100%;
+  }
+  .coverLetter {
+    overflow: scroll;
+  }
+  .aImage {
+    width: 15em;
+    height: 15em;
+  }
+  .contactMe {
+    margin: 11% 12%;
+  }
+}
+@media screen and (max-width: 940px) {
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: none;
+    padding: 0;
+  }
+  .buttons p {
+    margin: auto;
+    border: 2px solid var(--main-border-color);
+    border-radius: 10px;
+    margin-top: 5%;
+  } 
+  .sectionHold {
+    height: 70%;
+    width: 80%;
+    margin: 15% 2% 2% 10%;
+  }
+  .homeHolder {
+    font-size: 100%;
+    margin-top: 15%;
+  }
+  .presentation p {
+    bottom: 0;
+  }
+  .regularDevice {
+    display: none;
+  }
+  .smallDevice {
+    display: block;
+  }
+  .aImage {
+    width: 20em;
+    height: 20em;
+  }
+  .profilePhoto {
+    height: 40%;
+    width: 45%;
+}
+  .contactMe {
+    margin-top: 15%;
+    height: 65%;
+  }
+  .smallDevice h1 {
+    font-size: 3.8em;
+
+  }
+  .smallDevice h2 {
+    margin-top: -10%;
+    font-size: 1.8em;
+  }
+  .smallText {
+    text-align: center;
+    color: var(--main-text-color);
+  }
+  .mobileDataS {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .mobileDataS .linkedin {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 100%;
+    width: 100%;
+    margin-top: -5%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .home {
+    background: var(--url-background-small);
+    height: 120%;
+  }
+  .presentation {
+    font-size: 300%;
+  }
+  .buttons {
+    font-size: 200%;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .presentation p {
+    font-size: 50%;
+  }
+  .sectionHold {
+    font-size: 60%;
+    height: 60%;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 20%;
+  }
+  .profilePhoto {
+    height: 25%;
+    width: 30%;
+  }
+  .contactMe {
+    height: 60%;
+    font-size: 75%;
+  }
+  .darkModeButton {
+   margin-top: -15px; 
+  }
+  .actualMode {
+    font-size: .8em;
+  }
+
+}
+@media screen and (max-width: 320px) {
+  .home {
+    height: 150vh;
+  }
+  .sectionHold {
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 940px) and (orientation: landscape) {
+  .home {
+    height: 300vh;
+  }
+  .sectionHold {
+    height: 180vh;
+    width: 80vw;
+    margin: 15% 2% 2% 10%;
+  }
+
+}
+/*@media end*/
+/*DarkMode start*/
+.darkModeButton {
+  font-size: 2em;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  right: 5%;
+  top: 5%;
+  cursor: pointer;
+}
+.night {
+  color: var(--sun-button);
+  display: none;
+}
+.day {
+  color: var(--moon-button);
+  display: none;
+}
+.actualMode {
+  height: 1.5em;
+  width: 1.5em;
+  border: 2px solid var(--main-border-color);
+  border-radius: 10em;
+  display: block;
+  text-align: center;
+}
+/*DarkMode end*/
+/*Credits*/
+.credits {
+  background-color: #897cbe;
+  color: black;
+  border: 3px solid var(--main-border-color);
+  border-radius: 10em;
+  font-size: 1em;
+  width:  20em;
+  margin: auto;
+}
